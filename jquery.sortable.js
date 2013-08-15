@@ -1,6 +1,12 @@
 /*
  * HTML5 Sortable jQuery Plugin
- * http://farhadi.ir/projects/html5sortable
+ * https://github.com/nfm/html5sortable
+ *
+ * Original version by farhadi:
+ * https://github.com/farhadi/html5sortable
+ *
+ * This version is based on bgooren's fork, which contains fixes for nested sortables and dragging between lists with the same index:
+ * https://github.com/bgooren/html5sortable
  * 
  * Copyright 2012, Ali Farhadi
  * Released under the MIT license.
