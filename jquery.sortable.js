@@ -83,9 +83,11 @@ $.fn.sortable = function(options) {
 				}
 				$(this)[placeholder.index() < $(this).index() ? 'after' : 'before'](placeholder);
 				placeholders.not(placeholder).detach();
-			} else if (!placeholders.is(this) && !$(this).children(options.items).length) {
-				placeholders.detach();
-				$(this).append(placeholder);
+			} else if (!placeholders.is(this)) {
+				if (!$(this).children(options.items).length || ($(this).children(options.items).length == 1 && $(this).children().is(dragging))) {
+					placeholders.detach();
+					$(this).append(placeholder);
+				}
 			}
 			return false;
 		});
