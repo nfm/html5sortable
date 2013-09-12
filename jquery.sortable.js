@@ -77,10 +77,10 @@ $.fn.sortable = function(options) {
 			e.preventDefault();
 			e.originalEvent.dataTransfer.dropEffect = 'move';
 			if (items.is(this)) {
+				dragging.hide();
 				if (options.forcePlaceholderSize) {
 					placeholder.height(dragging.outerHeight());
 				}
-				dragging.hide();
 				$(this)[placeholder.index() < $(this).index() ? 'after' : 'before'](placeholder);
 				placeholders.not(placeholder).detach();
 			} else if (!placeholders.is(this) && !$(this).children(options.items).length) {
